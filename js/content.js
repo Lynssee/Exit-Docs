@@ -25,46 +25,55 @@ const icons = {
 // Job Descriptions Data
 const jobDescriptions = {
     cfo: {
-        title: 'CFO / Finance',
-        subtitle: 'Riset pasar, pricing strategy, financial planning',
+        title: 'Finance & Business Strategy Lead',
+        subtitle: 'Founding Team · Early-Stage / Part-Time',
+        focus: 'Pricing, analisis bisnis, dan kesehatan keuangan awal',
         responsibilities: [
-            'Riset pasar dan kompetitor untuk menentukan pricing yang kompetitif',
-            'Analisis data UMKM dan segmentasi target market',
-            'Menyusun financial projection dan revenue model',
+            'Membantu riset pasar dan kompetitor',
+            'Menyusun pricing strategy untuk produk ExIT',
+            'Membuat proyeksi sederhana (revenue & biaya)',
+            'Monitoring pemasukan & pengeluaran dasar',
             'Membantu negosiasi harga dengan klien',
-            'Monitoring cash flow dan profitability per project'
+            'Menyusun laporan sederhana untuk internal tim',
+            'Mendukung pengambilan keputusan bisnis CEO'
         ],
         requirements: [
-            'Paham dasar akuntansi dan financial planning',
-            'Bisa riset market dan analisis data',
-            'Komunikatif untuk dealing dengan klien',
-            'Bisa kerja dengan spreadsheet (Excel/Sheets)'
+            'Paham dasar keuangan & logika bisnis',
+            'Bisa menggunakan spreadsheet (Excel / Google Sheets)',
+            'Teliti dan rapi dalam data',
+            'Mau belajar tentang bisnis & startup',
+            'Tidak wajib background akuntansi'
         ],
-        commitment: '5-10 jam/minggu',
-        compensation: '10-20% revenue share per deal'
+        commitment: '± 5-10 jam/minggu',
+        compensation: 'Revenue share 10-20% per deal/project + potensi equity'
     },
     cmo: {
-        title: 'CMO / Marketing',
-        subtitle: 'Akuisisi klien, branding, social media',
+        title: 'Marketing & Growth Lead',
+        subtitle: 'Founding Team · Early-Stage / Part-Time',
+        focus: 'Akuisisi klien UMKM, validasi market, dan growth awal',
         responsibilities: [
-            'Mencari dan mengakuisisi klien UMKM',
-            'Manage social media dan content marketing',
-            'Membangun brand awareness ExIT Platform',
-            'Networking dengan komunitas UMKM',
-            'Follow-up leads dan closing deals'
+            'Mencari dan mengakuisisi klien UMKM (online & offline)',
+            'Menjalankan aktivitas sales & follow-up leads',
+            'Mengelola social media dan konten marketing dasar',
+            'Membantu membangun awareness brand ExIT Platform',
+            'Networking dengan komunitas UMKM / bisnis lokal',
+            'Melakukan demo produk dan membantu proses closing',
+            'Memberi feedback market ke tim produk (CEO/CTO)'
         ],
         requirements: [
-            'Punya network ke UMKM atau komunitas bisnis',
-            'Paham social media marketing',
+            'Punya minat di marketing, sales, dan bisnis digital',
             'Komunikatif dan persuasif',
-            'Bisa presentasi dan demo produk'
+            'Aktif di media sosial (Instagram, TikTok, dll)',
+            'Mau belajar dan terbuka dengan feedback',
+            'Tidak harus berpengalaman (fresh graduate welcome)'
         ],
-        commitment: '5-15 jam/minggu',
-        compensation: '10-20% dari closing deal'
+        commitment: '± 5-15 jam/minggu (fleksibel)',
+        compensation: 'Komisi 10-20% dari deal closing + potensi equity'
     },
     designer: {
         title: 'UI/UX Designer',
-        subtitle: 'Figma, design system, komponen library',
+        subtitle: 'Founding Team · Early-Stage / Part-Time',
+        focus: 'Design system, komponen library, dan template apps',
         responsibilities: [
             'Design komponen UI untuk builder platform',
             'Membuat design system dan style guide',
@@ -78,8 +87,8 @@ const jobDescriptions = {
             'Mengerti UX principles, bukan cuma visual',
             'Bisa terima feedback dan iterasi cepat'
         ],
-        commitment: '5-15 jam/minggu',
-        compensation: '15-25% dari nilai kustomisasi'
+        commitment: '± 5-15 jam/minggu',
+        compensation: '15-25% dari nilai kustomisasi + potensi equity'
     }
 };
 
@@ -100,16 +109,17 @@ function showJobModal(roleKey) {
             <button class="job-modal-close" onclick="window.closeJobModal()">×</button>
             <h2>${job.title}</h2>
             <p class="job-subtitle">${job.subtitle}</p>
+            ${job.focus ? `<p class="job-focus">📌 ${job.focus}</p>` : ''}
             
-            <h4>Tanggung Jawab</h4>
+            <h4>🎯 Tanggung Jawab</h4>
             <ul>${job.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
             
-            <h4>Kualifikasi</h4>
+            <h4>🧠 Kualifikasi</h4>
             <ul>${job.requirements.map(r => `<li>${r}</li>`).join('')}</ul>
             
             <div class="job-meta">
-                <div><strong>Komitmen:</strong> ${job.commitment}</div>
-                <div><strong>Kompensasi:</strong> ${job.compensation}</div>
+                <div><strong>⏱ Komitmen</strong> ${job.commitment}</div>
+                <div><strong>💰 Kompensasi</strong> ${job.compensation}</div>
             </div>
         </div>
     `;
@@ -347,9 +357,9 @@ function generateSection7() {
             <h1>Tim yang Kami Cari</h1>
             <p class="note-small">CEO & CTO sudah di-handle founder. Yang dicari: <em>(klik untuk detail)</em></p>
             <div class="cards-grid">
-                <div class="card card-clickable" onclick="window.showJobModal('cfo')">${icon('users')}<div class="card-title">CFO / Finance</div><div class="card-desc">Riset pasar, pricing strategy, financial planning</div></div>
-                <div class="card card-clickable" onclick="window.showJobModal('cmo')">${icon('users')}<div class="card-title">CMO / Marketing</div><div class="card-desc">Akuisisi klien, branding, social media</div></div>
-                <div class="card card-clickable" onclick="window.showJobModal('designer')">${icon('design')}<div class="card-title">UI/UX Designer</div><div class="card-desc">Figma, design system, komponen library</div></div>
+                <div class="card card-clickable" onclick="window.showJobModal('cmo')">${icon('users')}<div class="card-title">Marketing & Growth Lead</div><div class="card-desc">Akuisisi klien UMKM, validasi market, growth</div></div>
+                <div class="card card-clickable" onclick="window.showJobModal('cfo')">${icon('users')}<div class="card-title">Finance & Strategy Lead</div><div class="card-desc">Pricing, analisis bisnis, keuangan</div></div>
+                <div class="card card-clickable" onclick="window.showJobModal('designer')">${icon('design')}<div class="card-title">UI/UX Designer</div><div class="card-desc">Design system, komponen, template apps</div></div>
             </div>
         </section>
     `;
