@@ -355,7 +355,7 @@ function generateSection7() {
         <section id="section-7">
             <div class="section-marker"><span>07</span></div>
             <h1>Tim yang Kami Cari</h1>
-            <p class="note-small">CEO & CTO sudah di-handle founder. Yang dicari: <em>(klik untuk detail)</em></p>
+            <em>(klik untuk detail)</em></p>
             <div class="cards-grid">
                 <div class="card card-clickable" onclick="window.showJobModal('cmo')">${icon('users')}<div class="card-title">Marketing & Growth Lead</div><div class="card-desc">Akuisisi klien UMKM, validasi market, growth</div></div>
                 <div class="card card-clickable" onclick="window.showJobModal('cfo')">${icon('users')}<div class="card-title">Finance & Strategy Lead</div><div class="card-desc">Pricing, analisis bisnis, keuangan</div></div>
