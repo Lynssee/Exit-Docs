@@ -245,7 +245,7 @@ function generateSection2() {
             </table>
             <div class="note-box success">
                 <div class="note-label">Dengan ExIT</div>
-                <p>5-7 hari, Rp 20-30jt, aplikasi yang pas persis dengan kebutuhan, bisa offline.</p>
+                <p>5-7 hari, Mulai dari Rp 500rb, aplikasi yang pas persis dengan kebutuhan, bisa offline.</p>
             </div>
         </section>
     `;
@@ -355,7 +355,7 @@ function generateSection7() {
         <section id="section-7">
             <div class="section-marker"><span>07</span></div>
             <h1>Tim yang Kami Cari</h1>
-            <em>(klik untuk detail)</em></p>
+            <em>(klik untuk detail)</em>
             <div class="cards-grid">
                 <div class="card card-clickable" onclick="window.showJobModal('cmo')">${icon('users')}<div class="card-title">Marketing & Growth Lead</div><div class="card-desc">Akuisisi klien UMKM, validasi market, growth</div></div>
                 <div class="card card-clickable" onclick="window.showJobModal('cfo')">${icon('users')}<div class="card-title">Finance & Strategy Lead</div><div class="card-desc">Pricing, analisis bisnis, keuangan</div></div>
